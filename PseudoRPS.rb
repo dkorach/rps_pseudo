@@ -44,8 +44,11 @@ end
 
 puts ''
 
+roundnumber = 1
+puts ''
 history.each do |i| 
-	puts i[0] + ', ' + i[1]
+	puts "In round #{roundnumber} you chose #{i[0]}" + ' ' + "and the computer chose #{i[1]}"
+	roundnumber = roundnumber + 1 
 end
 	
 
