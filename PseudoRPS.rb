@@ -1,11 +1,14 @@
 wincounter = 0
 losscounter = 0
+
+history = []
+
 3.times do
 	puts "Choose Rock, Paper or Scissors"
 	userinput = gets.chomp
 	userinput = userinput.downcase
 	
-	puts computerinput = ["rock", "paper", "scissors"].sample
+	puts "The Computer chose: " +computerinput = ["rock", "paper", "scissors"].sample
 
 	if userinput == computerinput
 		puts "It's a Draw!"
@@ -28,6 +31,7 @@ losscounter = 0
 		puts "You Lose!"
 		losscounter = losscounter + 1 
 	end
+	history << [userinput, computerinput]
 end
 
 if wincounter > losscounter
@@ -37,6 +41,12 @@ elsif losscounter > wincounter
 elsif losscounter == wincounter
 	puts "You Tied!"
 end 
+
+puts ''
+
+history.each do |i| 
+	puts i[0] + ', ' + i[1]
+end
 	
 
 
